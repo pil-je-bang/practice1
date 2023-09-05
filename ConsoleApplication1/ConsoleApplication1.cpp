@@ -2,6 +2,19 @@
 //
 
 #include <iostream>
+#include <vector>
+#include <iomanip>
+
+
+//namespace Seoul {
+//	std::string 지역번호;
+//	std::string Randmark;
+//}
+//
+//namespace Busan {
+//	std::string 지역번호;
+//	std::string Randmark;
+//}
 
 //세 개의 수 가장 큰 수 구하기
 //int bignumber(int a, int b, int c) {
@@ -188,21 +201,282 @@ int main()
 	//}
 
 	//grade 배열
-	int grade[5];
-	float sum = 0;
+	//int grade[5];
+	//float sum = 0;
 
-	for (int i = 0; i < 5; i++) {
-		std::cout << i+1 << "번 학생의 성적을 입력하세요:";
-		std::cin >> grade[i];
+	//for (int i = 0; i < 5; i++) {
+	//	std::cout << i+1 << "번 학생의 성적을 입력하세요:";
+	//	std::cin >> grade[i];
+	//}
+	//for (int score : grade) {
+	//	sum += score;
+	//}
+	//std::cout << "평균"<< sum / 5;
+
+	/*동적 배열 사용하기*/
+	
+	//int x;
+	//int y;
+	//while (1) {
+	//	std::cout << "x를 입력하세요:";
+	//	std::cin >> x;
+	//	std::cout << "y를 입력하세요:";
+	//	std::cin >> y;
+
+	//	if (x > 0 && y > 0) {
+	//		break;
+	//	}
+	//	else {
+	//		std::cout << "x와 y 모두 양수를 입력해주세요\n";
+	//	}
+	//}
+
+	//std::cout << std::endl;
+
+	//int** arr = new int* [x];
+	//for (int i = 0; i < x; i++) {
+	//		arr[i] = new int[y];
+
+	//}
+	//int num = 1;
+	//for (int i = 0; i < x; i++) {
+	//	for (int j = 0; j < y; j++) {
+	//		arr[i][j] = num;
+	//		num++;
+	//		std::cout << std::setw(3) << arr[i][j];
+	//	}
+	//	std::cout << "\n";
+	//}
+
+	//for (int i = 0; i < x; i++) {
+	//	delete[] arr[i];
+	//}
+	//delete[] arr;
+	
+	//포인터 사용해서 성적 산출하기
+
+	//int num;
+	//std::cout << "몇 명";
+	//std::cin >> num;
+
+	//int* grade = new int[num];
+	//for (int i = 0; i < num; i++) {
+	//	std::cout << i + 1 << "번 학생의 점수를 입력하세요: ";
+	//	std::cin >> grade[i];
+	//	std::cout << "\n";
+	//}
+
+	//int sum = 0;
+	//for (int i = 0; i < num; i++) {
+	//	sum += grade[i];
+	//}
+	//std::cout << "성적 평균: " << (double)sum / num << std::endl;
+	//delete[] grade;
+
+
+	//vector 사용하기
+//	int x, y;
+//
+//	while (1) {
+//		std::cout << "x를 입력하세요: ";
+//		std::cin >> x;
+//		std::cout << "y를 입력하세요: ";
+//		std::cin >> y;
+//
+//	if (x > 0 && y > 0) {
+//		break;
+//	}
+//	else {
+//		std::cout << "x와 y모두 양수를 입력해주세요.\n";
+//	}
+//}
+//
+//	std::cout << std::endl;
+//
+//	std::vector<std::vector<int>> arr2;
+//	arr2.assign(x, std::vector<int>(y));
+//
+//	int num = 1;
+//	for (int i = 0; i < x; ++i) {
+//		for (int j = 0; j < y; ++j) {
+//			arr2[i][j] = num;
+//			//arr2.at(i).at(j) = num;
+//			num++;
+//		}
+//	}
+//	for (int i = 0; i < x; ++i) {
+//		std::vector<int>row;
+//		for (int j = 0; j < y; ++j) {
+//			row.push_back(num);
+//			num++;
+//		}
+//		arr2.push_back(row);
+//	}
+//
+//	for (int i = 0; i < x; ++i) {
+//		for (int j = 0; j < y; ++j) {
+//			std::cout << arr2[i][j]<<" ";
+//
+//
+//		}
+//		std::cout << "\n";
+//	}
+
+
+	//namespace 실습
+	//using namespace Seoul;
+	//using Busan::지역번호;
+	//using Busan::Randmark;
+
+	//std::cin >> Seoul::지역번호;
+	//std::cin >> Seoul::Randmark;
+	//std::cin >> Busan::지역번호;
+	//std::cin >> Busan::Randmark;
+	//std::cout << "서울의 지역번호는 "<<Seoul::지역번호<<"\n";
+	//std::cout << "서울의 랜드마크는 "<<Seoul::Randmark<<"\n";
+	//std::cout << "부산의 지역번호는 "<<Busan::지역번호 << "\n";
+	//std::cout << "부산의 랜드마크는 "<<Busan::Randmark << "\n";
+
+	//(2차원 배열의 복습) 행렬 합 구하기
+	//int x, y;
+	//std::cout << "행과 열의 수를 입력하세요: ";
+	//std::cin >> x >> y;
+	//std::cout << "\n";
+
+	//int** arr = new int *[x];
+	//for (int i = 0; i < x; ++i) {
+	//	arr[i] = new int[y];
+	//}
+
+	//std::cout << "행렬의 원소를 입력하세요: \n";
+	//for (int i = 0; i < x; ++i) {
+	//	for (int j = 0; j < y; ++j) {
+	//		std::cin >> arr[i][j];
+
+	//	}
+	//}
+	//std::cout << "\n";
+
+
+	//
+
+	//for(int i = 0; i<x; i++){
+	//	int rowsum = 0;
+	//	for (int j = 0; j < y; j++) {
+	//		rowsum += arr[i][j];
+	//	
+	//	}
+	//	std::cout << "행" << i+1 << ":" << rowsum << "\n";
+	//}
+
+	//std::cout << "\n";
+
+
+	//for (int j = 0; j < y; j++) {
+	//	int colsum = 0;
+	//	for (int i = 0; i < y; i++) {
+	//		colsum += arr[i][j];
+
+	//	}
+	//	std::cout << "열" << j+1 << ":" << colsum << "\n";
+	//}
+
+
+
+	//for (int i = 0; i < x; ++i) {
+	//	delete[] arr[i];
+	//}
+	//delete[] arr;
+
+	//return 0;
+
+	//(vector 복습)
+	//(1) vector를 사용하여 정수를 저장하는 빈 벡터 선언
+	std::vector<int> v;
+	//(2) 사용자로부터 5개정수
+	std::cout << "정수 5개를 입력하시오.\n";
+	for (int i = 0; i < 5; ++i) {
+		int num;
+		std::cin >> num;
+		v.push_back(num);
 	}
-	for (int score : grade) {
-		sum += score;
+	//(3) 벡터의 크기
+	std::cout << "벡터의 크기" << v.size();
+	std::cout << "\n";
+	//(4) 모든 원소 출력
+	std::cout << "모든 원소: ";
+	for (int i = 0; i < 5; ++i) {
+		std::cout << v.at(i)<< ' ';
 	}
-	std::cout << "평균"<< sum / 5;
+	std::cout << "\n";
+	//(5) 가장 큰 값 출력
+	int max = v.at(0);
+	for (int i = 0; i < 5; ++i) {
+	
+		if (v.at(i) > max) {
+			max = v.at(i);
+		}
+	}
+	std::cout << "가장 큰 값은 " << max;
+
+	std::cout << "\n";
+
+	//(6) 벡터의 모든 원소 2배
+	std::cout << "벡터의 모든 원소 2배: ";
+	for (int i = 0; i < 5; ++i) {
+		std::cout << 2 * v.at(i) << ' ';
+	}
+	std::cout << "\n";
+
+	//(7) 인덱스를 입력받아 해당 인덱스 제거
+	int a;
+	std::cout << "제거 인덱스를 입력하시오: ";
+	std::cin >> a;
+	v.erase(v.begin() + a, v.begin() + a + 1);
+	for (int i = 0; i < 4; ++i) {
+		std::cout << v.at(i) << ' ';
+	}
+	std::cout << "\n";
+	
+	//(8) 인덱스를 입력받아 해당 인덱스에 있는 새로운 원소 삽입
+	int b;
+	int c;
+	std::cout << "삽입 인덱스를 입력하시오: ";
+	std::cin >> b;
+	std::cout << "삽입할 원소를 입력하시오: ";
+	std::cin >> c;
+	v.insert(v.begin() + b, c);
+	for (int i = 0; i < 5; ++i) {
+		std::cout << v.at(i) << ' ';
+	}
 
 
 
 
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 }
 
