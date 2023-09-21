@@ -80,7 +80,7 @@ int main() {
 		system("cls");
 		cout << endl << endl << endl << endl << endl << setw(40) << "MANUAL" << endl << endl;
 		cout << "                                1.사용자는 100초의 시간을 얻습니다." << endl;
-		cout << "                                2.행맨의 목숨은 9번 틀릴 경우 소멸됩니다." << endl;
+		cout << "                                2.행맨의 목숨은 8번 틀릴 경우 소멸됩니다." << endl;
 		cout << "                                3.단어를 맞춘 사용자만이 랭킹에 이름을 남길 수 있습니다." << endl;
 		cout << "                                4.30분 이상의 연속된 게임 활동을 지양해주십시오." << endl;
 		cout << endl << endl << setw(50) << "                          진행하시겠습니까?";
