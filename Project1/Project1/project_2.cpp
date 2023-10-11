@@ -12,6 +12,7 @@ int main() {
 	string a;
 	string b;
 	string result;
+
 	int count = 0;
 	std::vector<string> v{ 40 };
 	cout << "처음 단어를 입력하세요 : ";
@@ -42,9 +43,5 @@ int main() {
 		else {
 			cout << "잘못된 입력입니다."<<endl;
 		}
-		
-		
-
-
 	}
 }
